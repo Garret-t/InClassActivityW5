@@ -13,6 +13,17 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(sub(-1, 1), -2)
         self.assertEqual(sub(-1,-1), 0)
 
-        
+    def test_multiply(self):
+        self.assertEqual(multiply(1, 2), 2)
+        self.assertEqual(multiply(-2, 3), -6)
+        self.assertEqual(multiply(2, -3), -6)
+        self.assertEqual(multiply(-2, -3), 6)
+        self.assertEqual(multiply(0, 1), 0)
+
+    def test_divide(self):
+        self.assertEqual(divide(2,1), 2)
+        self.assertEqual(divide(-2,1), -2)
+        self.assertEqual(divide(-2,-2), 1)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
