@@ -6,9 +6,13 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(add(1,2), 3)
         self.assertEqual(add(-1,2), 1)
         self.assertEqual(add(-1,-2), -3)
-        self.assertEqual(add(.5, 1.5), 2)
-        self.assertEqual(add(-.5, 1.5), 1)
-        self.assertEqual(add(-.5, -1.5), -2)
 
+    def test_sub(self):
+        self.assertEqual(sub(2, 1), 1)
+        self.assertEqual(sub(1,-2), 3)
+        self.assertEqual(sub(-1, 1), -2)
+        self.assertEqual(sub(-1,-1), 0)
+
+        
 if __name__ == "__main__":
     unittest.main(verbosity=2)
